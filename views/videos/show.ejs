@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Video Show Page</title>
+</head>
+<body>
+    <h1><%=video.title%></h1>
+    <h2>By <%=video.artist%></h2>
+     <div id="video-container">
+        <iframe
+            id="player"
+            type="text"
+            width="560"
+            height="315"
+            src="http://www.youtube.com/embed/<%=video.link%>?autoplay=1&rel=0"
+            frameborder="0"
+            allowfullscreen >
+        </iframe>
+    </div>
+    <% if (video.favorite) { %>
+        <h2> Favorite! </h2>
+    <% } else { %>
+        <h2> </h2>
+    <% } %>
+    <form action="/videos/<%=video._id%>?_method=DELETE" method="POST">
+        <button type="submit">Delete <%=video.title%></button>
+    </form>
+    <button>
+        <a href="/videos/<%=video._id%>/edit">Edit <%=video.title%></a>
+    </button>
+    <button>
+        <a href="/videos">Back to Video Library</a>
+    </button>
+</body>
+</html>

@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200..800&family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    background: #bde5de;
+    font-family: "Assistant", Arial;
+}
+
+button {
+    font-size: larger;
+}
+
+button:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Add Video</title>
+</head>
+<body>
+    <h1>Add a New Video!</h1>
+    <div id="vidInstructions">
+        <h3> Upload Instructions:</h3>
+        <ul id="vidList">
+            <li> Please do NOT paste your entire Youtube URL in the "Youtube Video ID" field. </li>
+            <li> To find your Youtube Video ID:
+                <ul>
+                    <li>Get your Youtube video URL</li>
+                    <li>Copy the code that shows up after "www.youtube.com/watch?v="</li>
+                    <li>For example:</li>
+                        <ul>
+                            <li> If your link is: "https://www.youtube.com/watch?v=penguin" => your video ID is: penguin </li>
+                            <li> If your link is: "https://www.youtube.com/watch?v=w4WiXKGCJhg" => Your video ID is: w4WiXKGCJhg </li>
+                        </ul>
+                </ul>
+            </li>
+            <li>NOTE: Please only upload full Youtube videos. Youtube Shorts are not supported at this time. </li>
+        </ul>
+    </div>
+    <h3>
+    <div class="form">
+        <form action="/videos" method="POST"> <!-- create a form with action="file path" and method="HTTP verb"-->
+            <label for="title">Video Title: </label>
+            <input name="title" type="text" />
+            <label for="artist">Artist: </label>
+            <input name="artist" type="text" />
+            <label for="link">Youtube Video ID: </label>
+            <input name="link" type="text" />
+            <label for="favorite">Favorite?</label>
+            <input name="favorite" type="checkbox" />
+            <button type="submit">Add video</button>
+        </form>
+    </div>
+    </h3>
+    <button>
+        <a href="/videos">Back to Library</a>
+    </button>
+</body>
+</html>

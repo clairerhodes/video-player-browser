@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <title>Edit Video</title>
+</head>
+<body>
+    <h1>Edit <%=video.title%> </h1>
+    <form action="/videos/<%=video._id%>?_method=PUT" method="POST"> <!-- trick EJS into doing a PUT by disguising as POST -->
+        <label for="title">Video Title: </label>
+        <input name="title" type="text" value="<%=video.title%>"/>
+        <label for="artist">Artist: </label>
+        <input name="artist" type="text" value="<%=video.artist%>"/>
+        <label for="link">Video Link: </label>
+        <input name="link" type="text" value="<%=video.link%>"/>
+        <label for="favorite">Favorite?</label>
+        <input
+            name="favorite"
+            type="checkbox"
+            <% if (video.favorite) { %>
+                checked
+            <% } %> />
+        <button type="submit">Update Video</button>
+    </form>
+    <button>
+        <a href="/videos">Back to Video Library</a>
+    </button>
+</body>
+</html>
