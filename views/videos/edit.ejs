@@ -10,11 +10,11 @@
     <h1>Edit <%=video.title%> </h1>
     <form action="/videos/<%=video._id%>?_method=PUT" method="POST" class="form"> <!-- trick EJS into doing a PUT by disguising as POST -->
         <label for="title">Video Title: </label>
-        <input name="title" type="text" value="<%=video.title%>"/>
-        <label for="channel">Channel: </label>
-        <input name="channel" type="text" value="<%=video.channel%>"/>
+        <input name="title" type="text" size="50" value="<%=video.title%>"/>
+        <label for="channel">Posted By: </label>
+        <input name="channel" type="text" size="50" value="<%=video.channel%>"/>
         <label for="link">Video Link: </label>
-        <input name="link" type="text" value="<%=video.link%>"/>
+        <input name="link" type="text" size="50" value="<%=video.link%>"/>
         <label for="favorite">Favorite?</label>
         <input
             name="favorite"

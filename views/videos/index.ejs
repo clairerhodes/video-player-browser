@@ -8,12 +8,14 @@
 </head>
 <body>
     <h1> Video Library </h1>
-    <ul>
+    <ul id="list">
         <% videos.forEach((video) => { %>
             <li>
-                <a href="/videos/<%=video._id%>">
+                <button id="videoList">
+                    <a href="/videos/<%=video._id%>">
                     <%=video.title%>
-                </a>
+                    </a>
+                </button>
             </li>
         <% }) %>
     </ul>
