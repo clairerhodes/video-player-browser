@@ -75,7 +75,7 @@ app.get("/videos/:videoId", async (req, res) => {
 
 // DELETE //videos/:videoId to delete video
 app.delete("/videos/:videoId", async (req, res) => {
-    await Video.findByIdAndDelete(req.params.videoId);
+    await Video.findByIdAndDelete(req.params.videoId); // find video by ID and delete
     // res.send(req.params.videoId);
     res.redirect('/videos');
 });
@@ -86,7 +86,7 @@ app.delete("/videos/:videoId", async (req, res) => {
 // GET localhost:3006/videos/:videoId/edit
 app.get("/videos/:videoId/edit", async (req, res) => {
     // res.send('edit page');
-    const foundVideo = await Video.findById(req.params.videoId);
+    const foundVideo = await Video.findById(req.params.videoId); // get specific video by using its ID
     res.render('videos/edit.ejs', { video: foundVideo });
 });
 

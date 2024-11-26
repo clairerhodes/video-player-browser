@@ -4,7 +4,7 @@ const mongoose = require("mongoose"); // require package
 // define the schema for each video
 const videoSchema = new mongoose.Schema({
     title: String,
-    artist: String,
+    channel: String,
     link: String,
     favorite: Boolean,
 });

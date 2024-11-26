@@ -8,7 +8,7 @@
 </head>
 <body>
     <h1><%=video.title%></h1>
-    <h2>By <%=video.artist%></h2>
+    <h2>By <%=video.channel%></h2>
      <div id="video-container">
         <iframe
             id="player"
@@ -26,12 +26,12 @@
         <h2> </h2>
     <% } %>
     <form action="/videos/<%=video._id%>?_method=DELETE" method="POST">
-        <button type="submit">Delete <%=video.title%></button>
+        <button type="submit" class="buttonText">Delete <%=video.title%></button>
     </form>
-    <button>
+    <button class="buttonText">
         <a href="/videos/<%=video._id%>/edit">Edit <%=video.title%></a>
     </button>
-    <button>
+    <button class="buttonText">
         <a href="/videos">Back to Video Library</a>
     </button>
 </body>

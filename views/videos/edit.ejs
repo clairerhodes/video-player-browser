@@ -8,11 +8,11 @@
 </head>
 <body>
     <h1>Edit <%=video.title%> </h1>
-    <form action="/videos/<%=video._id%>?_method=PUT" method="POST"> <!-- trick EJS into doing a PUT by disguising as POST -->
+    <form action="/videos/<%=video._id%>?_method=PUT" method="POST" class="form"> <!-- trick EJS into doing a PUT by disguising as POST -->
         <label for="title">Video Title: </label>
         <input name="title" type="text" value="<%=video.title%>"/>
-        <label for="artist">Artist: </label>
-        <input name="artist" type="text" value="<%=video.artist%>"/>
+        <label for="channel">Channel: </label>
+        <input name="channel" type="text" value="<%=video.channel%>"/>
         <label for="link">Video Link: </label>
         <input name="link" type="text" value="<%=video.link%>"/>
         <label for="favorite">Favorite?</label>
@@ -22,9 +22,9 @@
             <% if (video.favorite) { %>
                 checked
             <% } %> />
-        <button type="submit">Update Video</button>
+        <button type="submit" class="buttonText">Update Video</button>
     </form>
-    <button>
+    <button class="buttonText">
         <a href="/videos">Back to Video Library</a>
     </button>
 </body>
